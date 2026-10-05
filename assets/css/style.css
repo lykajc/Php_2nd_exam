@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Inter:wght@400;500&family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --white: #FFFFFF;
+    --blue: #66A3BF;
+    --gray: #3C3737;
+    --black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    background: url('../images/background.png') center / cover no-repeat fixed;
+}
+
+
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo text */
+.logo {
+    font-family: 'Allison', cursive;
+    font-weight: 400;
+    color: var(--white);
+}
+
+/* Navigation pill */
+.nav {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 999px;
+}
+
+.nav a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 22px;
+    border-radius: 999px;
+}
+
+.nav a.active {
+    background: rgba(31, 78, 90, 0.85);
+}
+
+/* Hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero .logo {
+    font-size: clamp(64px, 10vw, 128px);
+    line-height: 1.1;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 12px 0 28px;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    text-decoration: none;
+    background: rgba(102, 163, 191, 0.75);
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(102, 163, 191, 1);
+}
+
+/* Auth layout */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 6vw;
+}
+
+.auth-brand {
+    flex: 1;
+    max-width: 420px;
+}
+
+.auth-brand .logo {
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 1.1;
+}
+
+.auth-brand p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 16px;
+}
+
+/* The glass card */
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 28px 32px 32px;
+    border-radius: 24px;
+}
+
+.auth-logo {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+/* Register / Login toggle pill */
+.switch {
+    display: flex;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.switch a {
+    flex: 1;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1F4E5A;
+    text-decoration: none;
+    padding: 8px 0;
+    border-radius: 999px;
+}
+
+.switch a.active {
+    background: rgba(102, 163, 191, 0.8);
+}
+
+/* Form fields */
+.field {
+    margin-bottom: 14px;
+}
+
+.field label {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: var(--black);
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+}
+
+.field input::placeholder {
+    color: var(--guide-text);
+    opacity: 0.6;
+}
+
+.field input:focus {
+    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* Error messages */
+.error {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 3px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #FFE3E3;
+    background: rgba(170, 30, 30, 0.55);
+    border-radius: 6px;
+}
+
+/* Success message (used on the login page) */
+.success {
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #000000;
+    background: rgba(30, 120, 70, 0.6);
+    border-radius: 8px;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 8px;
+    background: rgba(31, 78, 90, 0.8);
+}
+
+.btn-full:hover {
+    background: rgba(31, 78, 90, 1);
+}
+
+/* Small screens: stack the brand above the card */
+@media (max-width: 800px) {
+    .auth-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .auth-brand {
+        text-align: center;
+        max-width: none;
+    }
+}
+
+/* Forgot password link */
+.forgot {
+    display: inline-block;
+    margin: 2px 0 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: var(--white);
+}
+
+/* Error box for wrong email/password */
+.error-box {
+    display: block;
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 8px;
+}
